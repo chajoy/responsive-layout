@@ -1,5 +1,3 @@
-@use "./functions.scss";
-
 *,
 *::before,
 *::after {
@@ -113,14 +111,6 @@ section {
     width: 100%;
   }
 
-  @for $i from 1 through 7 {
-    div:nth-child(#{$i}) {
-      div:first-child {
-        background-color: functions.random-colour();
-      }
-    }
-  }
-
   .card {
     height: 400px;
     display: grid;
@@ -160,4 +150,26 @@ section {
       }
     }
   }
+}
+
+.work div:nth-child(1) div:first-child {
+  background-color: rgb(189, 176, 72);
+}
+.work div:nth-child(2) div:first-child {
+  background-color: rgb(195, 92, 195);
+}
+.work div:nth-child(3) div:first-child {
+  background-color: rgb(92, 193, 174);
+}
+.work div:nth-child(4) div:first-child {
+  background-color: rgb(9, 24, 246);
+}
+.work div:nth-child(5) div:first-child {
+  background-color: rgb(121, 180, 34);
+}
+.work div:nth-child(6) div:first-child {
+  background-color: rgb(189, 157, 239);
+}
+.work div:nth-child(7) div:first-child {
+  background-color: rgb(242, 122, 29);
 }

@@ -1,5 +1,0 @@
-@use "sass:math";
-
-@function random-colour() {
-  @return rgba(math.random(256), math.random(256), math.random(256));
-}
