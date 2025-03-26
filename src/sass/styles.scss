@@ -1,3 +1,5 @@
+@use "./functions.scss";
+
 *,
 *::before,
 *::after {
@@ -56,13 +58,15 @@ h6 {
   text-wrap: balance;
 }
 
-.about {
+section {
   display: flex;
   align-items: center;
   max-width: 2000px;
   width: 80%;
-  margin: 100px auto;
+  margin: 50px auto;
+}
 
+.about {
   .profile {
     aspect-ratio: 1;
     object-fit: cover;
@@ -93,6 +97,67 @@ h6 {
 
     h1 {
       width: 100%;
+    }
+  }
+}
+
+.work {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+
+  h1 {
+    grid-area: 1 / 1 / 2 / 4;
+    width: 100%;
+  }
+
+  @for $i from 1 through 7 {
+    div:nth-child(#{$i}) {
+      div:first-child {
+        background-color: functions.random-colour();
+      }
+    }
+  }
+
+  .card {
+    height: 400px;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    background-color: rgba(255, 255, 255, 0.126);
+    backdrop-filter: blur(1rem);
+    outline: 1px solid rgb(133, 133, 133);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    div:first-child {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .description {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 20px;
+      gap: 20px;
+      align-items: center;
+
+      img {
+        margin-left: auto;
+      }
+
+      p:nth-of-type(2) {
+        font-size: 1rem;
+        grid-column: span 2;
+      }
     }
   }
 }
