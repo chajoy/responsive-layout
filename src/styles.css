@@ -68,11 +68,25 @@ section {
 }
 
 .about .profile {
-  aspect-ratio: 1;
-  object-fit: cover;
-  height: 400px;
+  position: relative;
   z-index: 1;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  height: 400px;
+  aspect-ratio: 1;
+  font-size: 2rem;
+  color: white;
+}
+.about .profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(0.9);
+  object-position: 80%;
+}
+.about .profile p {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .about .about-body {
   padding: 20px;
@@ -85,7 +99,6 @@ section {
   grid-template-rows: 1fr 1fr 1fr;
   backdrop-filter: blur(1rem);
   outline: 1px solid rgb(133, 133, 133);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .about .about-body .link {
   height: 40px;
