@@ -117,18 +117,24 @@ section {
 }
 
 .work {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.work h1 {
+  width: 100%;
+}
+.work .card_container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 20px;
   justify-items: center;
   align-items: center;
-}
-.work h1 {
-  grid-area: 1/1/2/4;
   width: 100%;
 }
 .work .card {
   height: 400px;
+  width: 100%;
   display: grid;
   grid-template-rows: 2fr 1fr;
   background-color: rgba(255, 255, 255, 0.5);
@@ -141,7 +147,7 @@ section {
   filter: brightness(1);
 }
 .work .card:hover .description {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(255, 255, 255);
   color: #4c5057;
 }
 .work .card div:first-child {

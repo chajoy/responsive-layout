@@ -126,19 +126,26 @@ section {
 }
 
 .work {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  justify-items: center;
-  align-items: center;
 
   h1 {
-    grid-area: 1 / 1 / 2 / 4;
+    width: 100%;
+  }
+
+  .card_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
     width: 100%;
   }
 
   .card {
     height: 400px;
+    width: 100%;
     display: grid;
     grid-template-rows: 2fr 1fr;
     background-color: rgba(255, 255, 255, 0.5);
@@ -152,7 +159,7 @@ section {
         filter: brightness(1);
       }
       .description {
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255);
         color: #4c5057;
       }
     }
