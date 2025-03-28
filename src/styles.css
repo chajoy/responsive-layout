@@ -12,7 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: "Roboto", sans-serif;
   background: linear-gradient(to right, #cfdef3, #e0eafc);
-  color: #60656f;
+  color: #4c5057;
   user-select: none;
 }
 
@@ -98,6 +98,10 @@ section {
 .about .about-body p {
   font-size: 1.2rem;
 }
+.about .about-body img:hover {
+  cursor: pointer;
+  filter: brightness(2);
+}
 
 .work {
   display: grid;
@@ -125,7 +129,7 @@ section {
 }
 .work .card:hover .description {
   background-color: rgba(255, 255, 255, 0.5);
-  color: #60656f;
+  color: #4c5057;
 }
 .work .card div:first-child {
   filter: brightness(0.8);
@@ -136,13 +140,13 @@ section {
   align-items: center;
 }
 .work .card .description {
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 20px;
   gap: 10px;
   align-items: center;
-  background-color: #60656f;
+  background-color: #4c5057;
   color: rgba(255, 255, 255, 0.8);
 }
 .work .card .description img {
