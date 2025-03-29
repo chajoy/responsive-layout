@@ -80,6 +80,7 @@ h1 {
   object-fit: cover;
   filter: contrast(0.9);
   object-position: 80%;
+  border-radius: 20px;
 }
 .about .profile p {
   font-family: "Rouge Script", sans-serif;
@@ -99,6 +100,7 @@ h1 {
   min-height: 300px;
   backdrop-filter: blur(1rem);
   outline: 1px solid rgb(133, 133, 133);
+  border-radius: 0 20px 20px 0;
 }
 .about .about-body .links {
   display: flex;
@@ -228,6 +230,7 @@ footer div {
   grid-template-columns: repeat(2, 1fr);
 }
 footer img {
+  border-radius: 20px;
   grid-area: 1/2/6/3;
   max-height: 300px;
   justify-self: end;
@@ -254,6 +257,7 @@ footer img {
   }
   .about .about-body {
     margin: 50px auto 0 auto;
+    border-radius: 20px;
   }
 }
 @media (max-width: 768px) {
