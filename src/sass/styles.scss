@@ -1,3 +1,5 @@
+@use "./mixins.scss";
+
 *,
 *::before,
 *::after {
@@ -59,15 +61,10 @@ h1 {
   font-size: 2rem;
 }
 
-section {
+.about {
   display: flex;
   align-items: center;
-  max-width: 2000px;
-  width: 80%;
-  margin: 50px auto;
-}
-
-.about {
+  @include mixins.centre-section();
   .profile {
     position: relative;
     z-index: 1;
@@ -99,7 +96,7 @@ section {
     align-items: center;
     flex-wrap: wrap;
     background-color: rgba(255, 255, 255, 0.5);
-    height: 300px;
+    min-height: 300px;
     grid-template-rows: 1fr 1fr 1fr;
     backdrop-filter: blur(1rem);
     outline: 1px solid rgb(133, 133, 133);
@@ -126,6 +123,7 @@ section {
 }
 
 .work {
+  @include mixins.centre-section();
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -218,14 +216,12 @@ section {
 
 footer {
   background-color: rgba(255, 255, 255, 0.7);
-  padding: 50px;
+  padding: 10px 0;
 
   div {
     display: grid;
     align-items: center;
-    max-width: 2000px;
-    width: 80%;
-    margin: auto;
+    @include mixins.centre-section();
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(2, 1fr);
   }
